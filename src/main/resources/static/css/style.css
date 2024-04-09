@@ -1,0 +1,282 @@
+.dropbtn {
+    padding: 8px; /* Adjust the padding to change the size of the button */
+    margin-top: 10px; /* Adjust the top margin to move the button down */
+    margin-bottom: 10px; /* Adjust the bottom margin to move the button up */
+}
+
+/* Override min-width for the specific dropdown */
+.special-dropdown-content {
+    min-width: 300px; /* Adjust the width as needed */
+    min-height: 500px;
+}
+
+body { /*These used to add background image,fontstyles in the body*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdd0cd;
+    background-image: url('images/894.jpg'); /* Specify the URL of your background image */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-attachment: fixed; /* Fixed background position */
+}
+
+.body-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Adjust the spacing as needed */
+    width: 150%; /* Set the desired width */
+    max-height: 280px; /* Set the maximum height if needed */
+}
+
+button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@keyframes slide {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    20%, 80% {
+        opacity: 1;
+    }
+}
+
+/* Add styles for the article section */
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+
+
+nav a:hover {
+    background-color: #555;
+}
+
+
+
+
+header {
+    text-align: left;
+    padding: 1em;
+    position: relative;
+}
+
+header .logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    position: absolute;
+    top: 4em;
+    right: 5px;
+}
+
+input[type="text"] {
+    width: 150px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#slideshow {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    animation: slide 5s infinite;
+}
+
+
+/* Add styles for the article section */
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #000000; /* Adjust the color as needed */
+    margin-left: -300px;
+}
+
+
+.article_body {
+     /* Adjust the color as needed */
+    color: black; /* Adjust the color as needed */
+    padding: 20px;
+    position: left;
+    border-radius: 5px;
+    margin-left: 0px; /* Adjust the spacing as needed */
+
+
+.article_text {
+    flex-grow: 1;
+}
+
+.article_heading {
+    margin: 0;
+}
+
+.article_intro {
+    margin: 0;
+}
+
+}
+
+
+.newsfeed {  /*Used to create news feed container */
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    border: 1px solid #000000;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.news-item h3 {  /*Style for heading and paragraph in news box*/
+    color: #000000;
+}
+
+.news-item p { /*Style for heading and paragraph in news box*/
+    color: #000000;
+}
+
+.news-item img /*This part of Styles for images within news box*/
+{
+    max-width: 100%; /*fixed width in the image*/
+    height: auto; /*height has been setted auto */
+    margin-bottom: 10px;  /*space has been bottom of the page*/
+}
+
+.navbar { /*This class is used for creating a appearance (style)for navigation bar*/
+overflow: hidden;
+background-color: #333;
+display: flex;
+justify-content: space-between; /*Aligns content evenly in navigation bar */
+text-align: center; /*Text as been centred in the bar*/
+padding:5px 80px; 
+}
+
+.navbar a  /*It apply style to anchor elements in navigation bar */
+{
+font-size: 16px; /*set front size of anchor*/
+color: white; 
+text-align: center;/*align anchor in centre position*/
+padding: 14px 20px;
+text-decoration: none; /*removing default decoration in the text*/
+flex:1; /*Setted flexibility to 1  to ensure that are evenly distributed in horizontal*/
+}
+
+.dropdown  /* This display will have surrounding width and height is applied*/
+{
+
+display: inline-block;
+}
+
+.dropdown .dropbtn {
+font-size: 16px;  /*Font size to 16 pixels*/
+border: none; /* removing default border when its done*/
+outline: none;
+color: white; /* text color to white*/
+padding: 14px 30px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn  /*Styles to links inside the navbar */
+{
+background-color: #555;
+}
+
+.dropdown-content { /*This style is assigned for the list option in the dropdown content */
+display: none; /*Intial property set to none in the display to get out from the default*/
+position: absolute; 
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*adding shadow effect element box of semi transpraent black is implemented*/
+z-index: 1;/*control the stacking order if elements,it was used to make sure it display above all elements in the page*/
+}
+
+.dropdown-content a {/*This select anchor in the dropdown it maintain color, padding, text decoration, display (to block), and text alignment*/
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover { /*This part style anchor element in the dropdown when its handovered  */
+background-color: #ddd; /*used white to show hover in the navigation bar*/
+}
+
+.dropdown:hover .dropdown-content { /*This has been created to show the content becomes visible*/
+display: block;/*content display is changed as block for visibility*/
+}
+footer {
+    text-align: center; /* Center-align all content inside the footer */
+    margin-top: 20px; /* Add some top margin for spacing */
+    width: 100%; /* Make sure the footer spans the entire width */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center-align child elements horizontally */
+    flex-wrap: wrap; /* Allow wrapping if content exceeds width */
+}
+
+.footer-section {
+    margin: 10px; /* Add margin around each section for spacing */
+}

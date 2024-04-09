@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Get Your card</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+</style>
+<body>
+    <header>
+        <img src="images\vbc.png" alt="Organ Donation Platform Logo" class="logo">
+    </header>
+    <div class="navbar">
+        
+
+         
+        <div class="dropdown special-dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">
+                <img src="images/poi.png" alt="Dropdown Icon" style="width: 40px; height: 20px;">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content special-dropdown-content">
+            <a href="card.html">Get a Donorcard</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Counselling</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Find a center </a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Events Calendar</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Sports Programme</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Service Directory</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">What's new</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Leave a Gift</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Publications</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Allocation Policies</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Waiting List Action Plans</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Our impact</a>
+
+          </div>
+          
+         
+        </div>
+        <script>
+            // Get the special dropdown button and content
+            const specialDropdownBtn = document.querySelector('.special-dropdown .dropbtn');
+            const specialDropdownContent = document.querySelector('.special-dropdown-content');
+    
+            // Function to show the dropdown content
+            function showDropdown() {
+                specialDropdownContent.style.display = 'block';
+            }
+    
+            // Function to hide the dropdown content
+            function hideDropdown() {
+                specialDropdownContent.style.display = 'none';
+            }
+    
+            //cCreated  Event listeners to show/hide the dropdown content on hover
+            specialDropdownBtn.addEventListener('mouseenter', showDropdown);
+            specialDropdownBtn.addEventListener('mouseleave', hideDropdown);
+            specialDropdownContent.addEventListener('mouseenter', showDropdown);
+            specialDropdownContent.addEventListener('mouseleave', hideDropdown);
+
+            function toggleDropdown() {
+            var dropdownContent = document.getElementById("specialDropdownContent");
+            dropdownContent.style.display === "none" ? dropdownContent.style.display = "block" : dropdownContent.style.display = "none";
+        }
+        </script>
+        <a href="index.html">Home</a>
+        
+        <a href="find.html">Find an Donor</a>
+
+        
+        
+        <a href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2020)649363">EU Laws</a>
+        <div class="dropdown">
+          <button class="dropbtn">Helping You Decide 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.organdonor.gov/learn/process/living-donation">Living Offerings</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Success stories</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Facts</a>
+          </div>
+          
+        </div> 
+        <a href="faq.html">FAQ</a>
+        <a href="resource.html">Resources</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com/watch?v=K4bS7YZjqhY">Our mission</a>
+                <a href="contact.html">Contact Us</a>
+            </div> 
+           
+        
+      </div>
+    </div>
+    <section class="container">
+        <h2>Get your Card</h2>
+        <form id="Get your card">
+            <label for="donor">Your Name:</label>
+            <input type="text" id="donor" name="donor" required placeholder="vicky fencer">
+
+            <label for="organ">Organ Type:</label>
+            <select id="organ" name="organ" required>
+                <option value="heart">Heart</option>
+                <option value="liver">Liver</option>
+                <option value="kidney">Kidney</option>
+                <option value="Blood">Blood</option>
+            </select>
+
+            <label for="contact">Contact Information:</label>
+            <textarea id="contact" name="contact" rows="4" required placeholder="Your contact details..."></textarea>
+
+            <!-- Added fields for username and password -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required placeholder="Your username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Your password">
+
+            <!-- Move the "Get Donor Card" button here -->
+            <button type="button" id="generateDonorCard">Get Donor Card</button>
+        </form>
+        
+        <!-- Container for displaying the donor card -->
+        <div id="donorCardContainer"></div>
+    </section>
+    <section>
+        <h2>Donors List</h2>
+        <table id="donorsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Country</th>
+                    <th>Zipcode</th>
+                    <th>Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Fetched Data</h2>
+        <table id="fetchedDataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fetched data rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+      <!--code for generating the donor card and fetching data will go here -->
+      <script>
+        // Function to generate the donor card
+        document.getElementById('generateDonorCard').addEventListener('click', function() {
+            // Get the form values
+            var donorName = document.getElementById('donor').value;
+            var organType = document.getElementById('organ').value;
+            var contact = document.getElementById('contact').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Construct the donor card HTML
+            var donorCardHTML = `
+                <div class="donor-card">
+                    <h2>Donor Card</h2>
+                    <p><strong>Name:</strong> ${donorName}</p>
+                    <p><strong>Organ Type:</strong> ${organType}</p>
+                    <p><strong>Contact Information:</strong> ${contact}</p>
+                    <p><strong>Username:</strong> ${username}</p>
+                    <p><strong>Password:</strong> ${password}</p>
+                </div>
+            `;
+
+            // Display the donor card in the donorCardContainer
+            document.getElementById('donorCardContainer').innerHTML = donorCardHTML;
+
+            //Q2 - Post the form data to port 8080 if clicked
+            fetch('http://localhost:8080/card', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    donorName: donorName,
+                    organType: organType,
+                    contact: contact,
+                    username: username,
+                    password: password
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Form data posted:', data);
+            })
+            .catch(error => {
+                console.error('Error posting form data:', error);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    //To answer Fetch data through port 8081 and populate the table , this part of code is for answering  question Q3
+    fetch('http://localhost:8081/users')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('donorsTable').querySelector('tbody');
+            tableBody.innerHTML = ''; // Clear existing rows
+
+            // Populate table with new data
+            data.forEach(donor => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><a href="#" class="clickable-id">${donor.id}</a></td>
+                    <td>${donor.name}</td>
+                    <td>${donor.username}</td>
+                    <td>${donor.email}</td>
+                    <td>${donor.type}</td>
+                    <td>${donor.phone}</td>
+                    <td>${donor.address}</td>
+                    <td>${donor.country}</td>
+                    <td>${donor.zipcode}</td>
+                    <td>${donor.info}</td>
+                `;
+                // Added click event listener to the ID cell itself
+                row.querySelector('.clickable-id').addEventListener('click', function(event) {
+                    
+                    event.preventDefault();
+                    // used to Get the ID when clicked
+                    const id = donor.id;
+                    // Called function to fetch data using the ID
+                    fetchDataById(id);
+                });
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+});
+
+// Function to fetch data by ID and update the UI accordingly,this function is created to answer Q4
+function fetchDataById(id) {
+   
+    // fetching data from the sql database from the given id clicked in the donor list table above that was import from the sql satabase
+    fetch('http://localhost:8081/users')
+        .then(response => response.json())
+        .then(data => {
+            // Filter the data for the user with the matching ID
+            const selectedDonor = data.find(donor => donor.id.toString() === id.toString());
+
+            // Check if a donor was found
+            if (selectedDonor) {
+                // Update the fetched data table to only show the selected donor's information
+                const fetchedDataTable = document.getElementById('fetchedDataTable').querySelector('tbody');
+                fetchedDataTable.innerHTML = ''; // Clear existing rows
+
+                // Create a new row for the fetched data with the selected donor's information
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${selectedDonor.name}</td>
+                    <td>${selectedDonor.email}</td>
+                    <td>${selectedDonor.phone}</td>
+                    <!-- Add more cells as needed based on the selectedDonor's data -->
+                `;
+
+                // Append the new row to the fetched data table
+                fetchedDataTable.appendChild(row);
+            } else {
+                console.error('No donor found with ID:', id);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+    </script>
+</body>
+</html>

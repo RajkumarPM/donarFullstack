@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"> <!--This tag was used to specify language of the webpage-->
+
+<head>
+    <meta charset="UTF-8"><!--used as default encoding for web pages-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--This used to scale the webpage for diffrent screens-->
+    <link rel="stylesheet" href="css/styles.css"><!--Used this style to adapt styles from styles file for the page-->
+    
+</head>
+
+<body>
+    <header>
+        <img src="images\vbc.png" alt="Organ Donation Platform Logo" class="logo"> <!--Placed Logo Organisation For the this page--> 
+    </header>
+    <div class="navbar">
+        
+
+         
+        <div class="dropdown special-dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">
+                <img src="images/poi.png" alt="Dropdown Icon" style="width: 40px; height: 20px;">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content special-dropdown-content">
+            <a href="card.html">Get a Donorcard</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Counselling</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Find a center </a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Events Calendar</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Sports Programme</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Service Directory</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">What's new</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Leave a Gift</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Publications</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Allocation Policies</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Waiting List Action Plans</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Our impact</a>
+
+          </div>
+          
+         
+        </div>
+        <script>
+            // Get the special dropdown button and content
+            const specialDropdownBtn = document.querySelector('.special-dropdown .dropbtn');
+            const specialDropdownContent = document.querySelector('.special-dropdown-content');
+    
+            // Function to show the dropdown content
+            function showDropdown() {
+                specialDropdownContent.style.display = 'block';
+            }
+    
+            // Function to hide the dropdown content
+            function hideDropdown() {
+                specialDropdownContent.style.display = 'none';
+            }
+    
+            // Event listeners to show/hide the dropdown content on hover
+            specialDropdownBtn.addEventListener('mouseenter', showDropdown);
+            specialDropdownBtn.addEventListener('mouseleave', hideDropdown);
+            specialDropdownContent.addEventListener('mouseenter', showDropdown);
+            specialDropdownContent.addEventListener('mouseleave', hideDropdown);
+
+            function toggleDropdown() {
+            var dropdownContent = document.getElementById("specialDropdownContent");
+            dropdownContent.style.display === "none" ? dropdownContent.style.display = "block" : dropdownContent.style.display = "none";
+        }
+
+
+
+
+        
+        </script>
+        <a href="index.html">Home</a>
+        
+        <a href="find.html">Find an Donor</a>
+
+        
+        
+        <a href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2020)649363">EU Laws</a>
+        <div class="dropdown">
+          <button class="dropbtn">Helping You Decide 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.organdonor.gov/learn/process/living-donation">Living Offerings</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Success stories</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Facts</a>
+          </div>
+          
+        </div> 
+        <a href="faq.html">FAQ</a>
+        <a href="resource.html">Resources</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com/watch?v=K4bS7YZjqhY">Our mission</a>
+                <a href="contact.html">Contact Us</a>
+            </div> 
+           
+        
+      </div>
+    </div>
+    
+<!--By using div class to container it applies styles that was applied before-->
+    <div class="container"><!--It is created for contact form-->
+        <h1>Contact Us</h1><!--Display contact us at the top of the page-->
+        <form action>
+            <label for="name">Your Name:</label><!--Created label required for the form-->
+            <input type="text" id="name" name="name" required><!--It allows user to give their name and placeholder is used in text area-->
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea><!--It allows user to give a message and placeholder is used in text area-->
+
+            <input type="submit" value="Submit"><!--created button to submit form-->
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en"><!--This tag was used to specify language of the webpage-->
+
+<head>
+    <meta charset="UTF-8"><!--used as default encoding for web pages-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--This used to scale the webpage for diffrent screens-->
+    <link rel="stylesheet" href="css/styles.css"><!--Used this style to adapt styles from styles file for the page-->
+    <title>Registration</title><!--Title for this page-->
+    
+</head>
+
+<body>
+    <header>
+        <img src="images/vbc.png" alt="Organ Donation Platform Logo" class="logo"><!--Placed Logo Organisation For the this page--> 
+    </header>
+
+    <div class="navbar">
+        
+
+         
+        <div class="dropdown special-dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">
+                <img src="images/poi.png" alt="Dropdown Icon" style="width: 40px; height: 20px;">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content special-dropdown-content">
+            <a href="card.html">Get a Donorcard</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Counselling</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Find a center </a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Events Calendar</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Sports Programme</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Service Directory</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">What's new</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Leave a Gift</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Publications</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Allocation Policies</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Waiting List Action Plans</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Our impact</a>
+
+          </div>
+          
+         
+        </div>
+        <script>
+            // Get the special dropdown button and content
+            const specialDropdownBtn = document.querySelector('.special-dropdown .dropbtn');
+            const specialDropdownContent = document.querySelector('.special-dropdown-content');
+    
+            // Function to show the dropdown content
+            function showDropdown() {
+                specialDropdownContent.style.display = 'block';
+            }
+    
+            // Function to hide the dropdown content
+            function hideDropdown() {
+                specialDropdownContent.style.display = 'none';
+            }
+    
+            // Event listeners to show/hide the dropdown content on hover
+            specialDropdownBtn.addEventListener('mouseenter', showDropdown);
+            specialDropdownBtn.addEventListener('mouseleave', hideDropdown);
+            specialDropdownContent.addEventListener('mouseenter', showDropdown);
+            specialDropdownContent.addEventListener('mouseleave', hideDropdown);
+
+            function toggleDropdown() {
+            var dropdownContent = document.getElementById("specialDropdownContent");
+            dropdownContent.style.display === "none" ? dropdownContent.style.display = "block" : dropdownContent.style.display = "none";
+        }
+        </script>
+        <a href="index.html">Home</a>
+        
+        <a href="find.html">Find an Donor</a>
+
+        
+        
+        <a href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2020)649363">EU Laws</a>
+        <div class="dropdown">
+          <button class="dropbtn">Helping You Decide 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.organdonor.gov/learn/process/living-donation">Living Offerings</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Success stories</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Facts</a>
+          </div>
+          
+        </div> 
+        <a href="faq.html">FAQ</a>
+        <a href="resource.html">Resources</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com/watch?v=K4bS7YZjqhY">Our mission</a>
+                <a href="contact.html">Contact Us</a>
+            </div> 
+           
+        
+      </div>
+    </div><!--To answer Q2 second form created to input data from users -->
+<!--By using div class to container it applies styles that was applied before-->
+    <section class="container"><!--It is created for contact form-->
+        <div class="registration-form">
+            <h2>Login Page</h2>
+            <form id="registrationForm">
+
+                <label for="username">Username:</label><!--Created label required for the form-->
+                <input type="text" id="username" name="username" required><!--It allows user to give there and placeholder is used in text area-->
+
+                <label for="password">Password:</label><!--Created label required for the form-->
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button><!--created button to submit form-->
+            </form>
+        </div>
+    </section>
+    <section class="container">
+        <h2>Logged In Users</h2>
+        <table id="loggedInUsersTable">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Login Time</th>
+                    <th>mobileno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table body will be dynamically populated with logged-in users data -->
+            </tbody>
+        </table>
+    </section>
+   
+   <!--javascript code to send the inputted data to the database-->
+   <script>
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        // Gather form data
+        const formData = {
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value,
+        };
+    
+        // Making API call to login endpoint
+        fetch('http://localhost:8080/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json(); // Parse response as JSON
+            } else {
+                throw new Error('Invalid username or password');
+            }
+        })
+        .then(data => {
+            // Check if the username is "admin"
+            if (data.username === "admin") {
+                alert('Admin login successful');
+                window.location.href = 'admin.html'; // Redirect to index page for admin
+            } else {
+                alert('User login successful');
+                // Redirect to another page for regular users
+                window.location.href = 'user.html'; 
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        });
+    });
+    </script>
+    
+    
+</body>
+
+</html>

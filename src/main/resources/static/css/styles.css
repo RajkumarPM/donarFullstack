@@ -1,0 +1,498 @@
+/* This is the main body styling for the webpage */
+body {
+    font-family: Arial, sans-serif; /* Set font family for the body */
+    margin: 0; /* Remove margin from the body */
+    padding: 0; /* Remove padding from the body */
+    background-color: #cdd0cd; /* Set background color for the body */
+    /* Add background image, font styles, and other properties for the body */
+    background-image: url('images/894.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+ }
+ 
+ /* Styles for the body image to adjust its width and margin without changing its aspect ratio */
+ .body-image {
+    max-width: 100%; /* Set maximum width for the image */
+    height: auto; /* Set height to auto for the image */
+    margin-bottom: 20px; /* Add space at the bottom of the image */
+ }
+ 
+ /* Styles for the header section */
+ header {
+    text-align: left; /* Align text to the left */
+    padding: 1em; /* Add padding to the header */
+    position: relative; /* Position the header relatively */
+ }
+ 
+ /* Styles for the logo in the header */
+ header .logo {
+    max-width: 100px; /* Set maximum width for the logo */
+    margin-bottom: 10px; /* Add space at the bottom of the logo */
+    margin-left: 50px; /* Add margin to the left of the logo */
+ }
+ 
+ /* Styles for the navigation bar */
+ nav {
+    background-color: #333; /* Set background color for the navigation bar */
+    overflow: hidden; /* Hide any overflow from the navigation bar */
+    position: relative; /* Position the navigation bar relatively */
+    width: 100%; /* Set width to 100% for the navigation bar */
+ }
+ 
+ /* Styles for the unordered list in the navigation bar */
+ nav ul {
+    list-style-type: none; /* Remove list style type from the unordered list */
+    margin: 0; /* Remove margin from the unordered list */
+    padding: 0; /* Remove padding from the unordered list */
+    text-align: center; /* Center align the list items */
+ }
+ 
+ /* Styles for the list items in the navigation bar */
+ nav li {
+    display: inline-block; /* Display list items inline-block */
+    margin-right: 20px; /* Add margin to the right of the list items */
+    position: relative; /* Position the list items relatively */
+ }
+ 
+ /* Styles for the anchor elements in the navigation bar */
+ nav a {
+    display: block; /* Display anchor elements as block elements */
+    color: white; /* Set text color for the anchor elements */
+    text-align: left; /* Align text to the left */
+    padding: 20px 16px; /* Add padding to the anchor elements */
+    text-decoration: none; /* Remove any text decoration from the anchor elements */
+ }
+ 
+ /* Styles for the anchor elements in the navigation bar on hover */
+ nav a:hover {
+    background-color: #555; /* Set background color for the anchor elements on hover */
+ }
+ 
+ /* Styles for the dropdown menu in the navigation bar */
+ nav .dropdown-content {
+    display: none; /* Hide the dropdown content initially */
+    position: absolute; /* Position the dropdown content absolutely */
+    background-color: #333; /* Set background color for the dropdown content */
+    border-radius: 5px; /* Add border radius to the dropdown content */
+    padding: 8px; /* Add padding to the dropdown content */
+    z-index: 1; /* Set z-index to ensure the dropdown content is displayed above all elements */
+ }
+ 
+ /* Styles for the dropdown content on hover */
+ nav li:hover .dropdown-content {
+    display: block; /* Display the dropdown content as a block element on hover */
+ }
+ 
+ /* Styles for the anchor elements in the dropdown content */
+ nav .dropdown-content a {
+    color: white; /* Set text color for the anchor elements in the dropdown content */
+    text-decoration: none; /* Remove text decoration for the anchor elements in the dropdown content */
+    display: block;
+    padding: 8px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba (0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+/* Apply styling to input[type="number"], input[type="email"], input[type="date"] */
+input[type="age" i],
+input[type="number" i],
+input[type="date" i] {
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Adjust margin-bottom as needed */
+    border-radius: 4px;
+}
+input[type="email" i] {
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Adjust margin-bottom as needed */
+    border-radius: 4px;
+}
+input[type="tel" i],
+input[type="password" i]
+{
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Adjust margin-bottom as needed */
+    border-radius: 4px;
+}
+
+button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+body { /*These used to add background image,fontstyles in the body*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdd0cd;
+    background-image: url('images/894.jpg'); /* Specify the URL of your background image */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-attachment: fixed; /* Fixed background position */
+}
+.body-image/*class selector with class  to adjust image width and margin without changing its aspect ratio*/
+ {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /*adding space at the bottom of the image */
+}
+.newsfeed {  /*Used to create news feed container */
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color:#fff;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for a subtle depth effect */
+    padding: 20px; /* Add padding to news items */
+    box-sizing: border-box;
+}
+
+.news-item h3 {  /*Style for heading and paragraph in news box*/
+    color: #000000;
+}
+
+.news-item p { /*Style for heading and paragraph in news box*/
+    color: #000000;
+}
+
+.news-item img /*This part of Styles for images within news box*/
+{
+    max-width: 100%; /*fixed width in the image*/
+    height: auto; /*height has been setted auto */
+    margin-bottom: 10px;  /*space has been bottom of the page*/
+    border-radius:5px;
+}
+
+.navbar { /*This class is used for creating a appearance (style)for navigation bar*/
+overflow: hidden;
+background-color: #333;
+display: flex;
+justify-content: space-between; /*Aligns content evenly in navigation bar */
+text-align: center; /*Text as been centred in the bar*/
+padding:5px 80px; 
+}
+
+.navbar a  /*It apply style to anchor elements in navigation bar */
+{
+font-size: 16px; /*set front size of anchor*/
+color: white; 
+text-align: center;/*align anchor in centre position*/
+padding: 14px 20px;
+text-decoration: none; /*removing default decoration in the text*/
+flex:1; /*Setted flexibility to 1  to ensure that are evenly distributed in horizontal*/
+}
+
+.dropdown  /* This display will have surrounding width and height is applied*/
+{
+
+display: inline-block;
+}
+
+.dropdown .dropbtn {
+font-size: 16px;  /*Font size to 16 pixels*/
+border: none; /* removing default border when its done*/
+outline: none;
+color: white; /* text color to white*/
+padding: 14px 30px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn  /*Styles to links inside the navbar */
+{
+background-color: #555;
+}
+
+.dropdown-content { /*This style is assigned for the list option in the dropdown content */
+display: none; /*Intial property set to none in the display to get out from the default*/
+position: absolute; 
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*adding shadow effect element box of semi transpraent black is implemented*/
+z-index: 1;/*control the stacking order if elements,it was used to make sure it display above all elements in the page*/
+}
+
+.dropdown-content a {/*This select anchor in the dropdown it maintain color, padding, text decoration, display (to block), and text alignment*/
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover { /*This part style anchor element in the dropdown when its handovered  */
+background-color: #ddd; /*used white to show hover in the navigation bar*/
+}
+
+.dropdown:hover .dropdown-content { /*This has been created to show the content becomes visible*/
+display: block;/*content display is changed as block for visibility*/
+}
+footer {
+    text-align: center; /* Center-align all content inside the footer */
+    margin-top: 20px; /* Add some top margin for spacing */
+    width: 100%; /* Make sure the footer spans the entire width */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center-align child elements horizontally */
+    flex-wrap: wrap; /* Allow wrapping if content exceeds width */
+}
+
+.footer-section {
+    margin: 10px; /* Add margin around each section for spacing */
+}
+
+#userDataDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px; /* Adjust margin as needed */
+    overflow-x: auto; /* Add horizontal scrolling if necessary */
+}
+
+#userDataTable {
+    border-collapse: collapse;
+    width: 100%; /* Adjust width as needed */
+    max-width: 800px; /* Max width for better readability */
+}
+#userDataTable thead {
+    text-align: center; /* Center-align table headings */
+}
+
+#userDataTable th,
+#userDataTable td {
+    padding: 8px;
+    text-align: left;
+}
+
+#userDataTable th {
+    background-color: #f2f2f2; /* Background color for table header */
+}
+
+#userDataTable tr:nth-child(even) {
+    background-color: #f2f2f2; /* Background color for even rows */
+}
+
+#userDataTable tr:hover {
+    background-color: #ddd; /* Background color on hover */
+}
+body { /*It is used to set basic layout of my page*/ 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdd0cd;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 { /*It is used to align the my content in centre */
+    text-align: center;
+}
+
+form { /*To make it easier to adjust the layout I added extra margin ad created a form*/
+    margin-top: 20px;
+}
+
+label { /* formed text area to get input from the user*/
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],/*Used this to create form submission button ,background button,text color,padding,margin for text*/
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea { /*Used adjust text area*/
+    height: 150px;
+}
+
+input[type="submit"] /*Used this to create form submission button ,background button,text color,padding,margin*/
+{
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #444;
+}
+body  /*It is used to set basic layout of my page*/ 
+{  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdd0cd;
+}
+
+/*Styles used in registration form*/
+.registration-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form label  /* This is used to display block and adds bottom margin*/
+{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.registration-form input/* In this it, adds padding and bottom margin, and styles border and border-radius*/
+ {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.registration-form button/*implemented submit button background color, text color, padding, border, border-radius, and cursor pointer*/
+ {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-form button:hover { /*style that was used when button hovered */
+    background-color: #444;
+}
+.container { /*Set the maximum width of the container to 400px*/
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 { /*Center-align the text of the h2 element*/
+    text-align: center;
+}
+
+form { /*Add a top margin of 20px*/
+    margin-top: 20px;
+}
+
+label {   /*Display the label as a block element*/   
+display: block;   /* Add a bottom margin of 10px*/   
+margin-bottom: 10px; }
+
+input[type="text"],
+input[type="password"] { /*Set the width of the input elements to 100%*/
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {/*Set the background color of the submit button*/
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover { /*Change the background color of the submit button on hover*/
+    background-color: #444;
+}
+
+table {  /*Set the width of the table to 100%*/
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td { /*Add a border to the table cells*/
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {  /* // Set the background color of the table header cells*/
+    background-color: #f2f2f2;
+}

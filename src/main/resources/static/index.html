@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"> <!--This tag was used to specify language of the webpage-->
+
+<head>
+    <meta charset="UTF-8"><!--used as default encoding for web pages-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--This used to scale the webpage for diffrent screens-->
+    <link rel="stylesheet" href="css\style.css"><!--Used this style to adapt styles from style file for the page-->
+    <title>Organ Donation Platform</title><!--Title for this page-->
+    </head>
+
+    <body style="background-image: url('images/894.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <header>
+        <img src="images/vbc.png" alt="Organ Donation Platform Logo" class="logo">
+        
+    </header>
+<div class="navbar"> <!--Navigation bar section of the webpage-->
+        <div class="dropdown special-dropdown"> <!--Dropdown menu container-->
+            <button class="dropbtn" onclick="toggleDropdown()"> <!--Dropdown button-->
+                <img src="images/poi.png" alt="Dropdown Icon" style="width: 40px; height: 20px;"> <!--Dropdown icon-->
+                <i class="fa fa-caret-down"></i> <!--Caret icon for dropdown-->
+            </button>
+            <div class="dropdown-content special-dropdown-content" id="specialDropdownContent"> <!--Dropdown content container-->
+                <a href="card.html">Get a Donorcard</a> <!--Link for getting a donor card-->
+                <a href="https://www.organdonor.gov/learn/life-stories">Counselling</a> <!--Link for counseling services-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Find a center </a> <!--Link for finding a center-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Events Calendar</a> <!--Link for events calendar-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Sports Programme</a> <!--Link for sports program-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Service Directory</a> <!--Link for service directory-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">What's new</a> <!--Link for what's new section-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Leave a Gift</a> <!--Link for leaving a gift-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Publications</a> <!--Link for publications-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Allocation Policies</a> <!--Link for allocation policies-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Waiting List Action Plans</a> <!--Link for waiting list action plans-->
+                <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Our impact</a> <!--Link for our impact section-->
+            </div>
+        </div>
+        <script>
+            // Get the special dropdown button and content
+            const specialDropdownBtn = document.querySelector('.special-dropdown .dropbtn');
+            const specialDropdownContent = document.querySelector('.special-dropdown-content');
+    
+            // Function to show the dropdown content
+            function showDropdown() {
+                specialDropdownContent.style.display = 'block';
+            }
+    
+            // Function to hide the dropdown content
+            function hideDropdown() {
+                specialDropdownContent.style.display = 'none';
+            }
+    
+            // Event listeners to show/hide the dropdown content on hover
+            specialDropdownBtn.addEventListener('mouseenter', showDropdown);
+            specialDropdownBtn.addEventListener('mouseleave', hideDropdown);
+            specialDropdownContent.addEventListener('mouseenter', showDropdown);
+            specialDropdownContent.addEventListener('mouseleave', hideDropdown);
+
+            function toggleDropdown() {
+            var dropdownContent = document.getElementById("specialDropdownContent");
+            dropdownContent.style.display === "none" ? dropdownContent.style.display = "block" : dropdownContent.style.display = "none";
+        }
+        </script>
+        <a href="index.html">Home</a>
+        <a href="find.html">Find an Donor</a>
+        <a href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2020)649363">EU Laws</a>
+        <div class="dropdown">
+          <button class="dropbtn">Helping You Decide 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.organdonor.gov/learn/process/living-donation">Living Offerings</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Success stories</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Facts</a>
+          </div>
+          
+        </div> 
+        <a href="faq.html">FAQ</a>
+        <a href="resource.html">Resources</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com/watch?v=K4bS7YZjqhY">Our mission</a>
+                <a href="contact.html">Contact Us</a>
+            </div> 
+           
+        
+      </div>
+    </div>
+    <!--Used this tag to add images in the body of websites -->
+    <img src="images\hjg.jpg" alt="Additional Image" class="body-image">
+
+    <section class="container"><!--container has been created in the top of the page-->
+        <form>
+            <input type="text" id="Search" name="Search" placeholder="Search"> <!--placeho;der has been created to search-->
+            <button type="submit">Go</button> <!--button has been created to search-->
+            <a href="registration.html"><button type="button">Login</button></a><!-- a link with button login to the existing user-->
+        </form>
+
+        
+        <div> <!--News feed content has been feeded-->
+            <a href="https://www.organdonation.nhs.uk/helping-you-to-decide/about-organ-donation/nhs-organ-donor-register/#why" class="article article--featured article--purple" target="_top">
+                <div class="article_body">
+                    <div class="article_text">
+                        <h3 class="h5 article_heading" data-mh="article-heading" style>Why sign up?</h3>
+                        <p data-mh="article-intro" style>Learn why it's essential to take action.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="newsfeed">
+            <div class="news-item">
+                <img src="images\young_resized.jpg" alt="News Image 1">
+                <h3>Who can Donate?</h3>
+                <p><a href="#">The eligibility to donate can vary depending on the specific context, platform, or organization facilitating the donation process.</a></p>
+            </div>
+
+            <div class="news-item">
+                <img src="images\hand.jpg" alt="News Image 2">
+                <h3>Importance of Giving</h3>
+                <p><a href="#">Becoming a living donor is a profound and selfless act that embodies the essence of compassion, altruism, and the willingness to make a positive impact on another person's life.</a> </p>
+            </div>
+            <div class="news-item">
+                <img src="images\olm_resized.png" alt="News Image 2">
+                <h3> Ripple Effect of Donation</h3>
+                <p><a href="#">The act of donation, whether it be in the form of organs, blood, time, or resources, holds the extraordinary potential to bring about profound and positive transformations in the lives of both givers and recipients.</a></p>
+            </div>
+            <div class="news-item">
+                <img src="images\surgery_resized.jpg" alt="News Image 2">
+                <h3>The Origin and Evolution of Organ Donations</h3>
+                <p><a href="#">Organ donation, a noble act that has the potential to save and enhance lives, has a rich history that spans cultures, civilizations, and medical advancements.</a></p>
+            </div>
+            <div class="news-item">
+                <img src="images\granny_resized.jpeg" alt="News Image 2">
+                <h3>The Journey of a Living Donor: Personal Stories of Selfless Giving</h3>
+                <p><a href="#">The decision to become a living donor is a testament to the boundless compassion and selflessness that resides within individuals. </a></p>
+            </div>
+            <div class="news-item">
+                <img src="images\cathlab_resized_resized.jpeg" alt="News Image 2">
+                <h3>Innovation in Transplant Medicine: Advancements Shaping the Future</h3>
+                <p><a href="#">The landscape of transplant medicine has undergone a remarkable transformation, driven by relentless innovation and groundbreaking advancements.</a></p>
+            </div>
+            
+        </div><!--News feed for the page-->
+    </section>
+    <footer> <!--Footer is implemented-->
+        <hr style="border: 2px solid black;"> <!--bllack lines are added for visual present-->
+        <div class="footer-content">
+            <div class="footer-section">
+         
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; 2024 Organ Donation Platform 
+        </div>
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><!--This tag was used to specify language of the webpage-->
+    <header>
+        <img src="images\vbc.png" alt="Organ Donation Platform Logo" class="logo"><!--Placed Logo Organisation For the this page--> 
+    </header>
+<head>
+    <meta charset="UTF-8"><!--used as default encoding for web pages-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--This used to scale the webpage for diffrent screens-->
+    <link rel="stylesheet" href="css/styles.css"><!--Used this style to adapt styles from styles file for the page-->
+    <title>New Donate Form</title><!--Title for this page-->
+</head>
+
+<body>
+    <div class="navbar">
+        
+
+         
+        <div class="dropdown special-dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">
+                <img src="images/poi.png"  alt="Dropdown Icon" style="width: 40px; height: 20px;">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content special-dropdown-content">
+            <a href="card.html">Get a Donorcard</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Counselling</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Find a center </a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Events Calendar</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Sports Programme</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Service Directory</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">What's new</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Leave a Gift</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Publications</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Allocation Policies</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Waiting List Action Plans</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Our impact</a>
+
+          </div>
+          
+         
+        </div>
+        <script>
+            // special dropdown button and content
+            const specialDropdownBtn = document.querySelector('.special-dropdown .dropbtn');
+            const specialDropdownContent = document.querySelector('.special-dropdown-content');
+    
+            // Function used to show the dropdown content
+            function showDropdown() {
+                specialDropdownContent.style.display = 'block';
+            }
+    
+            // Function used  to hide the dropdown content
+            function hideDropdown() {
+                specialDropdownContent.style.display = 'none';
+            }
+    
+            // Event listeners to show/hide the dropdown content on hover
+            specialDropdownBtn.addEventListener('mouseenter', showDropdown);
+            specialDropdownBtn.addEventListener('mouseleave', hideDropdown);
+            specialDropdownContent.addEventListener('mouseenter', showDropdown);
+            specialDropdownContent.addEventListener('mouseleave', hideDropdown);
+
+            function toggleDropdown() {
+            var dropdownContent = document.getElementById("specialDropdownContent");
+            dropdownContent.style.display === "none" ? dropdownContent.style.display = "block" : dropdownContent.style.display = "none";
+        }
+        </script>
+        <a href="index.html">Home</a>
+        
+        <a href="find.html">Find an Donor</a>
+
+        
+        
+        <a href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2020)649363">EU Laws</a>
+        <div class="dropdown">
+          <button class="dropbtn">Helping You Decide 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.organdonor.gov/learn/process/living-donation">Living Offerings</a>
+            <a href="https://www.organdonor.gov/learn/life-stories">Success stories</a>
+            <a href="https://www.youtube.com/watch?v=hY0sU0RNM4c">Facts</a>
+          </div>
+          
+        </div> 
+        <a href="faq.html">FAQ</a>
+        <a href="resource.html">Resources</a>
+        <div class="dropdown">
+            <button class="dropbtn">About us
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com/watch?v=K4bS7YZjqhY">Our mission</a>
+                <a href="contact.html">Contact Us</a>
+            </div> 
+           
+        
+      </div>
+    </div>
+    <section class="container">
+    <h2>Find A Form</h2>
+<!--created form to input data into the database-->
+    <form id="myForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="type">Type:</label><br>
+        <input type="text" id="type" name="type" required><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="country">Country:</label><br>
+        <input type="text" id="country" name="country" required><br><br>
+
+        <label for="zipcode">Zipcode:</label><br>
+        <input type="text" id="zipcode" name="zipcode" required><br><br>
+
+        <label for="info">Info:</label><br>
+        <textarea id="info" name="info" rows="4" required></textarea><br><br>
+        <label for="email">email:</label><br>
+        <input type="text" id="email" name="email" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+     <!-- Tabular to display form data -->
+     <table id="formDataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Country</th>
+                <th>Zipcode</th>
+                <th>Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table body will populated with form data -->
+        </tbody>
+    </table>
+    </section>
+   <!--Q2- JAVA SCRIPT CODE TO POST DATA FROM INPUT THROUGH FORMS-->
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) { //added event listner in submit button to sense whether data is submitted
+            event.preventDefault(); // Prevent default form submission
+    
+            // Gather form data to post in database
+            const formData = {
+                name: document.getElementById('name').value,
+                username: document.getElementById('username').value,
+                email: document.getElementById('email').value,
+                type: document.getElementById('type').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                country: document.getElementById('country').value,
+                zipcode: document.getElementById('zipcode').value,
+                info: document.getElementById('info').value
+            };
+    
+            // Making API call to post data
+            fetch('http://localhost:8080/user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Form submitted successfully!');
+                // Calling the function to update the table with form data
+                updateTable(formData);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        });
+    
+        // Function used to update the table with form data
+        function updateTable(formData) {
+            const tableBody = document.querySelector('#formDataTable tbody');
+            const newRow = tableBody.insertRow();
+    
+            // Inserting form data into table cells
+            Object.values(formData).forEach(value => {
+                const cell = newRow.insertCell();
+                cell.textContent = value;
+            });
+        }
+    </script>
+    
+</body>
+
+</html>
